@@ -10,11 +10,12 @@ A palindrome is a word or phrase that reads the same forwards and backward (igno
 
 function isPalindrome(word) {
   // Write your algorithm here
+  let myword = word.toLowerCase()
   let left = 0
   let right = word.length - 1
 
   while (left < right) {
-    if (word[left] !== word[right]) return false
+    if (myword[left] !== myword[right]) return false
     left++
     right--
   }
@@ -22,7 +23,7 @@ function isPalindrome(word) {
   return true
 }
 
-console.log(isPalindrome("racecar"))
+console.log(isPalindrome("RACECAR"))
 console.log(isPalindrome("robot"))
 
 /* 
